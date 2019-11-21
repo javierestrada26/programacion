@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Empleado">
+  <ClassDiagramComponents>
+    <Class name="Empleado" package="trabajodos" visibility="public" xPosition="456.0" yPosition="53.0">
+      <Fields>
+        <Field name="sueldo" type="double" visibility="private"/>
+        <Field name="nombres" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombres"/>
+          <Argument type="double" name="sueldo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setSueldo" returnType="void" visibility="public">
+          <Argument type="double" name="sueldo"/>
+        </Method>
+        <Method name="getSueldo" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gerente" package="trabajodos" visibility="public" xPosition="74.0" yPosition="401.0">
+      <Fields>
+        <Field name="departamento" type="String" visibility="public"/>
+        <Field name="secretaria" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="departamento"/>
+          <Argument type="String" name="secretaria"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="departamento"/>
+          <Argument type="String" name="secretaria"/>
+          <Argument type="String" name="nombres"/>
+          <Argument type="double" name="sueldo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Operario" package="trabajodos" visibility="public" xPosition="668.0" yPosition="401.0">
+      <Fields>
+        <Field name="horasLaboradas" type="double" visibility="private"/>
+        <Field name="costohoras" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="horasLaboradas"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="double" name="horasLaboradas"/>
+          <Argument type="String" name="nombres"/>
+          <Argument type="double" name="sueldo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setSueldo" returnType="void" visibility="public">
+          <Argument type="double" name="horaslaboradas"/>
+          <Argument type="double" name="costohoras"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="test" package="trabajodos" visibility="public" xPosition="874.0" yPosition="84.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="trabajodos.Operario" target="trabajodos.Empleado"/>
+    <IsRelation name="is" source="trabajodos.Gerente" target="trabajodos.Empleado"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

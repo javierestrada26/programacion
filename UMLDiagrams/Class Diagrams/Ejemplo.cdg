@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejemplo">
+  <ClassDiagramComponents>
+    <Class name="Empleado" package="" visibility="public" xPosition="230.0" yPosition="77.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="sueldo" type="double" visibility="public"/>
+        <Field name="horasLab" type="double" visibility="private"/>
+        <Field name="costoHoras" type="double" visibility="private"/>
+        <Field name="Bononavi" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="horasLab"/>
+          <Argument type="double" name="costoHoras"/>
+          <Argument type="double" name="Bononavi"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularSueldo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gerente" package="" visibility="public" xPosition="216.0" yPosition="473.0">
+      <Fields>
+        <Field name="Departamento" type="String" visibility="public"/>
+        <Field name="Secretaria" type="String" visibility="public"/>
+        <Field name="bonoAdic" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="Departamento"/>
+          <Argument type="String" name="Secretaria"/>
+          <Argument type="double" name="bonoAdic"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calcularsueldo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Operario" package="" visibility="public" xPosition="552.0" yPosition="500.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Gerente" target="Empleado"/>
+    <IsRelation name="is" source="Operario" target="Empleado"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

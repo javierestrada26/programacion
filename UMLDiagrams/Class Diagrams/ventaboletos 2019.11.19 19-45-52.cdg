@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ventaboletos">
+  <ClassDiagramComponents>
+    <Class name="Teatro" package="ventaboletos" visibility="public" xPosition="360.0" yPosition="141.0">
+      <Fields>
+        <Field name="id" type="int" visibility="public"/>
+        <Field name="zona" type="int" visibility="public"/>
+        <Field name="nombre" type="String" visibility="public"/>
+        <Field name="precio_boleto" type="double" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="zona"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio_boleto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getZona" returnType="int" visibility="public"/>
+        <Method name="setZona" returnType="void" visibility="public">
+          <Argument type="int" name="zona"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPrecio_boleto" returnType="double" visibility="public"/>
+        <Method name="setPrecio_boleto" returnType="void" visibility="public">
+          <Argument type="double" name="precio_boleto"/>
+        </Method>
+        <Method name="obtenerPrecioBoleto" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Entradas_Abonado" package="ventaboletos" visibility="public" xPosition="3.0" yPosition="667.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="zona"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio_boleto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="obtenerPrecioBoleto" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Entradas_Normales" package="ventaboletos" visibility="public" xPosition="560.0" yPosition="683.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="zona"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio_boleto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="obtenerPrecioBoleto" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Entradas_Reducidas" package="ventaboletos" visibility="public" xPosition="795.0" yPosition="451.0">
+      <Fields>
+        <Field name="tipo_descuento" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tipo_descuento"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="tipo_descuento"/>
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="zona"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio_boleto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTipo_descuento" returnType="String" visibility="public"/>
+        <Method name="setTipo_descuento" returnType="void" visibility="public">
+          <Argument type="String" name="tipo_descuento"/>
+        </Method>
+        <Method name="obtenerPrecioBoleto" returnType="// Sobreescribimos el metodo obtenerPrecioBoleto , segun el descuento que representen las entradas reducidas. double" visibility="public"/>
+        <Method name="toString" returnType="// se redifine el mÃ©todo toString(); String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Prueba" package="ventaboletos" visibility="public" xPosition="859.0" yPosition="131.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="ventaboletos.Entradas_Reducidas" target="ventaboletos.Teatro"/>
+    <IsRelation name="is" source="ventaboletos.Entradas_Abonado" target="ventaboletos.Teatro"/>
+    <IsRelation name="is" source="ventaboletos.Entradas_Normales" target="ventaboletos.Teatro"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

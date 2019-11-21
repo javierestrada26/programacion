@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="pruebafactura">
+  <ClassDiagramComponents>
+    <Class name="Factura" package="pruebafactura" visibility="public" xPosition="194.0" yPosition="205.0">
+      <Fields>
+        <Field name="numeroPieza" type="String" visibility="package"/>
+        <Field name="descripcionPieza" type="String" visibility="package"/>
+        <Field name="cantidadPiezas" type="int" visibility="package"/>
+        <Field name="precioPieza" type="double" visibility="package"/>
+        <Field name="montoFactura" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numeroPieza"/>
+          <Argument type="String" name="descripcionPieza"/>
+          <Argument type="int" name="cantidadPiezas"/>
+          <Argument type="double" name="precioPieza"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumeroPieza" returnType="String" visibility="public"/>
+        <Method name="setNumeroPieza" returnType="void" visibility="public">
+          <Argument type="String" name="numeroPieza"/>
+        </Method>
+        <Method name="getDescripcionPieza" returnType="String" visibility="public"/>
+        <Method name="setDescripcionPieza" returnType="void" visibility="public">
+          <Argument type="String" name="descripcionPieza"/>
+        </Method>
+        <Method name="getCantidadPiezas" returnType="int" visibility="public"/>
+        <Method name="setCantidadPiezas" returnType="void" visibility="public">
+          <Argument type="int" name="cantidadPiezas"/>
+        </Method>
+        <Method name="getPrecioPieza" returnType="double" visibility="public"/>
+        <Method name="setPrecioPieza" returnType="void" visibility="public">
+          <Argument type="double" name="precioPieza"/>
+        </Method>
+        <Method name="obtenerMontoFactura" returnType="double" visibility="public">
+          <Argument type="int" name="cantidadPieza"/>
+          <Argument type="double" name="precioPieza"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PruebaFactura" package="pruebafactura" visibility="public" xPosition="369.0" yPosition="19.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

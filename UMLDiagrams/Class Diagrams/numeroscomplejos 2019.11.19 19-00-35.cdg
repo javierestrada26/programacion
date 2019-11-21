@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="numeroscomplejos">
+  <ClassDiagramComponents>
+    <Class name="Complejo" package="numeroscomplejos" visibility="public" xPosition="342.0" yPosition="163.0">
+      <Fields>
+        <Field name="parteReal" type="double" visibility="private"/>
+        <Field name="parteImaginaria" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="real"/>
+          <Argument type="double" name="imaginaria"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getParteReal" returnType="double" visibility="public"/>
+        <Method name="getParteImaginaria" returnType="double" visibility="public"/>
+        <Method name="suma" returnType="void" visibility="public">
+          <Argument type="Complejo" name="otro"/>
+        </Method>
+        <Method name="resta" returnType="void" visibility="public">
+          <Argument type="Complejo" name="otro"/>
+        </Method>
+        <Method name="producto" returnType="void" visibility="public">
+          <Argument type="Complejo" name="otro"/>
+        </Method>
+        <Method name="cociente" returnType="void" visibility="public">
+          <Argument type="Complejo" name="otro"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="numeroscomplejos.Complejo" target="numeroscomplejos.Complejo" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
